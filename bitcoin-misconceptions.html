@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The common ₿itcoin misconceptions - Radu Butucea</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+        }
+        .article-container {
+            max-width: 1200px;
+            padding: 2rem 2rem 2rem 2rem;
+            color: #2C3E50;
+        }
+        /* Markdown-like styling */
+        .markdown-body {
+            font-size: 16px;
+            line-height: 1.5;
+            max-width: 800px;
+            text-align: left;
+        }
+        .markdown-body h1 { 
+            font-size: 2em; 
+            margin-bottom: 0.2em; 
+            font-weight: 600;
+        }
+        .markdown-body h2 { 
+            font-size: 1.5em; 
+            margin-top: 1.5em;
+            margin-bottom: 0.5em;
+            font-weight: 600;
+            border-bottom: none;
+        }
+        .markdown-body h3 { 
+            font-size: 1.25em;
+            font-weight: 600;
+        }
+        .markdown-body p { 
+            margin: 0.8em 0; 
+        }
+        .markdown-body ul, .markdown-body ol { 
+            padding-left: 1.5em; 
+            margin: 0.5em 0;
+        }
+        .markdown-body li { 
+            margin: 0.2em 0; 
+        }
+        .markdown-body hr { 
+            margin: 1.5em 0; 
+            border: 0; 
+            border-top: 1px solid #eee; 
+        }
+        .markdown-body em { 
+            font-style: italic; 
+        }
+        .markdown-body strong { 
+            font-weight: 600; 
+        }
+        .markdown-body code { 
+            padding: 0.2em 0.4em; 
+            background-color: #f6f8fa; 
+            border-radius: 3px; 
+        }
+        /* Date styling */
+        .markdown-body em:first-of-type {
+            display: block;
+            margin-bottom: 1.5em;
+            color: #333;
+        }
+        /* Table styling */
+        .markdown-body table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1em 0;
+        }
+        .markdown-body th, .markdown-body td {
+            padding: 0.5em;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+        .markdown-body th {
+            background-color: #f8f9fa;
+            font-weight: 600;
+        }
+        .markdown-body tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+        /* Image styling */
+        .markdown-body img {
+            max-width: 100%;
+            height: auto;
+            margin: 1em 0;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="musings.html">Musings</a>
+    </nav>
+
+    <main class="article-container">
+        <div id="content" class="markdown-body"></div>
+    </main>
+
+    <script>
+        // Fetch and render the Markdown content
+        fetch('assets/blog_entries/bitcoin-misconceptions.md')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.text();
+            })
+            .then(markdown => {
+                document.getElementById('content').innerHTML = marked.parse(markdown);
+            })
+            .catch(error => {
+                console.error('Error loading the article:', error);
+                document.getElementById('content').innerHTML = '<p>Error loading the article. Please try again later.</p>';
+            });
+    </script>
+</body>
+</html> 
