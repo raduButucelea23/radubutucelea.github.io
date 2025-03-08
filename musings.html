@@ -21,29 +21,6 @@
             margin-left: auto;
             margin-right: auto;
         }
-        .musings-intro h1 {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
-            color: #2C3E50;
-            position: relative;
-            display: inline-block;
-        }
-        .musings-intro h1:before, .musings-intro h1:after {
-            content: "";
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            border: 2px solid #FF6347;
-            border-radius: 10px;
-            top: -5px;
-            left: -5px;
-            z-index: -1;
-        }
-        .musings-intro h1:after {
-            top: 5px;
-            left: 5px;
-            border-color: #FF6347;
-        }
         .musings-intro p {
             color: #666;
             line-height: 1.6;
@@ -100,17 +77,6 @@
             color: #666;
             border-radius: 3px;
         }
-        /* Quirky elements */
-        .quirky-dots {
-            position: absolute;
-            width: 50px;
-            height: 50px;
-            right: 20px;
-            bottom: 20px;
-            opacity: 0.1;
-            background-image: radial-gradient(#3498db 2px, transparent 2px);
-            background-size: 10px 10px;
-        }
         @media (max-width: 768px) {
             .blog-entries {
                 grid-template-columns: 1fr;
@@ -127,7 +93,6 @@
 
     <main class="musings-container">
         <div class="musings-intro">
-            <h1>Musings</h1>
             <p>A collection of thoughts, ideas, and explorations on topics that fascinate me. From technology and cryptocurrency to philosophy and beyond.</p>
         </div>
         
