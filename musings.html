@@ -17,21 +17,32 @@
         .musings-intro {
             max-width: 600px;
             margin-bottom: 3rem;
-            position: relative;
-        }
-        .musings-intro:after {
-            content: "✍️";
-            position: absolute;
-            font-size: 3rem;
-            right: -50px;
-            top: -20px;
-            opacity: 0.2;
-            transform: rotate(15deg);
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
         }
         .musings-intro h1 {
             font-size: 2.5rem;
             margin-bottom: 0.5rem;
             color: #2C3E50;
+            position: relative;
+            display: inline-block;
+        }
+        .musings-intro h1:before, .musings-intro h1:after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border: 2px solid #FF6347;
+            border-radius: 10px;
+            top: -5px;
+            left: -5px;
+            z-index: -1;
+        }
+        .musings-intro h1:after {
+            top: 5px;
+            left: 5px;
+            border-color: #FF6347;
         }
         .musings-intro p {
             color: #666;
@@ -45,7 +56,7 @@
         }
         .blog-entry {
             position: relative;
-            padding: 1.5rem;
+            padding: 1rem;
             border-radius: 8px;
             transition: all 0.3s ease;
             background-color: #fff;
@@ -57,50 +68,27 @@
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
             border-left: 3px solid #3498db;
         }
-        .blog-entry:before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, rgba(209,232,226,0.1) 0%, rgba(255,255,255,0) 50%);
-            border-radius: 8px;
-            z-index: -1;
+        .entry-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.8rem;
         }
         .blog-title {
             color: #2C3E50;
-            margin-bottom: 0.5rem;
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             text-decoration: none;
-            display: block;
-            position: relative;
-            padding-right: 1.5rem;
+            font-weight: 500;
         }
-        .blog-title:after {
-            content: "→";
-            position: absolute;
-            right: 0;
-            top: 50%;
-            transform: translateY(-50%);
-            opacity: 0;
-            transition: all 0.3s ease;
-        }
-        .blog-entry:hover .blog-title:after {
-            opacity: 1;
-            right: -10px;
+        .blog-title:hover {
+            color: #3498db;
         }
         .blog-date {
             color: #666;
-            font-size: 0.9rem;
-            display: inline-block;
-            padding: 0.2rem 0.5rem;
-            background-color: #f8f9fa;
-            border-radius: 3px;
-            margin-top: 0.5rem;
+            font-size: 0.8rem;
+            white-space: nowrap;
         }
         .tags {
-            margin-top: 1rem;
             display: flex;
             flex-wrap: wrap;
             gap: 0.5rem;
@@ -145,25 +133,27 @@
         
         <div class="blog-entries">
             <article class="blog-entry">
-                <a href="why-bitcoin.html" class="blog-title">Why ₿itcoin?</a>
-                <div class="blog-date">November 5, 2022</div>
+                <div class="entry-header">
+                    <a href="why-bitcoin.html" class="blog-title">Why ₿itcoin?</a>
+                    <div class="blog-date">November 5, 2022</div>
+                </div>
                 <div class="tags">
                     <span class="tag">Cryptocurrency</span>
                     <span class="tag">Finance</span>
                     <span class="tag">Technology</span>
                 </div>
-                <div class="quirky-dots"></div>
             </article>
             
             <!-- Placeholder for future blog entries -->
             <article class="blog-entry" style="opacity: 0.5;">
-                <a href="#" class="blog-title">Coming soon...</a>
-                <div class="blog-date">Future date</div>
+                <div class="entry-header">
+                    <a href="#" class="blog-title">Coming soon...</a>
+                    <div class="blog-date">Future date</div>
+                </div>
                 <div class="tags">
                     <span class="tag">Stay</span>
                     <span class="tag">Tuned</span>
                 </div>
-                <div class="quirky-dots"></div>
             </article>
         </div>
     </main>
