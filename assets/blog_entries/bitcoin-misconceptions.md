@@ -7,7 +7,7 @@ Introduced anonymously to the public in 2009, it didn't take long for bitcoin to
 
 Whether it's due to its price volatility, socio-economic model or its claimed potential to "make the world a better place", Bitcoin is a digital system that promises to offer its users decentralized, irreversible and censorship-resistant exchange of its native currency, the bitcoin token.
 
-As some of you with which I'm personally acquainted may already know, a while back I decided to dedicate my time to learn more about Bitcoin and eventually be able to contribute to the space. In a future post I will provide a more detailed account of my personal motivation but to begin with I would like to dedicate this post to share a couple of thoughts on some of the most popular concerns that I came across whenever I mention bitcoin to my friends, family or people I talk to.
+As some of you with whom I'm personally acquainted may already know, a while back I decided to dedicate my time to learn more about Bitcoin and eventually be able to contribute to the space. In a future post I will provide a more detailed account of my personal motivation but to begin with I would like to dedicate this post to share a couple of thoughts on some of the most popular concerns that I came across whenever I mention bitcoin to my friends, family or people I talk to.
 
 ## The price fluctuations
 
