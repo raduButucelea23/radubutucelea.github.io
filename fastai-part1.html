@@ -96,7 +96,6 @@
 <body>
     <nav>
         <a href="index.html">Home</a>
-        <a href="about.html">About</a>
         <a href="musings.html">Musings</a>
     </nav>
 
@@ -114,11 +113,9 @@
                 return response.text();
             })
             .then(markdown => {
-                // Add a date to the markdown content if not already present
-                if (!markdown.includes('*March')) {
-                    const title = markdown.split('\n')[0];
-                    markdown = markdown.replace(title, title + '\n*March 14, 2023*');
-                }
+                // Add today's date to the markdown content
+                const title = markdown.split('\n')[0];
+                markdown = markdown.replace(title, title + '\n*June 28, 2024*');
                 
                 document.getElementById('content').innerHTML = marked.parse(markdown);
             })
